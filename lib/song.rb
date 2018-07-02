@@ -40,6 +40,8 @@ end
 
 def self.genre_count
   @@genre.each do |genre|
-    if genre.count |genre|
+    if genre.count [genre]
+      genre_count [genre] += 1
+    else
+      genre_count [genre] = 1
 Song.new
- 
