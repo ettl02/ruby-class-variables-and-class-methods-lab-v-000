@@ -9,7 +9,7 @@ class Song
   @artist = artist
   @genre = genre
 @@genres << genre
-@@artists << artist 
+@@artists << artist
 end
 
 attr_accessor :name, :artist, :genre
@@ -18,8 +18,8 @@ def self.count
   @@count
 end
 
-def artists
-
+def self.artists
+@@artists.uniq
 def genres
 @@genre.each do |k, v|
   key.find(genre)
