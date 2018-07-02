@@ -51,3 +51,5 @@ end
 artist_count
 end
 end
+
+song.new
