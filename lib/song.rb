@@ -19,16 +19,25 @@ def self.count
 end
 
 def self.artists
-@@artists.uniq
+  @@artists.uniq
+end 
+
 def genres
-@@genre.each do |k, v|
+  @@genre.each do |k, v|
   key.find(genre)
 end
 
 def artist_count
-  @@artist.each do |k, v|
-    key.find(artist)
-    @@count
-end
+  artist_count = 0 
+  @@artist.each do |k|
+  if artist_count[artist]
+    artist_count[artist] += 1
+  else 
+    artist_count [artist] = 1
+  end 
+end 
+artist_count
+end 
 
 Song.new
+ 
