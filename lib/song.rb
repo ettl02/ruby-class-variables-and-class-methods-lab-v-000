@@ -26,6 +26,17 @@ def self.genres
   @@genre.uniq
 end
 
+def self.genre_count
+  @@genre.each do |genre|
+    if genre.count [genre]
+      genre_count [genre] += 1
+    else
+      genre_count [genre] = 1
+    end
+  end
+  genre_count
+end
+
 def self.artist_count
   artist_count = {}
   @@artist.each do |k|
@@ -37,15 +48,3 @@ def self.artist_count
 end
 artist_count
 end
-
-def self.genre_count
-  @@genre.each do |genre|
-    if genre.count [genre]
-      genre_count [genre] += 1
-    else
-      genre_count [genre] = 1
-    end 
-  end
-  genre_count
-end 
-
