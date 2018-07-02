@@ -5,7 +5,7 @@ class Song
     @@count += 1
   @name = name
   @artist = artist
-  @genre = genre
+  @genre = []
 end
 
 attr_accessor :name, :artist, :genre
@@ -16,5 +16,14 @@ end
 
 
 def genres
+@@genre.each do |k, v|
+  key.find(genre)
 end
+
+def artist_count
+  @@artist.each do |k, v|
+    key.find(artist)
+    @@count
 end 
+
+Song.new
